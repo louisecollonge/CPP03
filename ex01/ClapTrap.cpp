@@ -1,4 +1,5 @@
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 ClapTrap::ClapTrap( std::string name ) : hitPoints(10), energyPoints(10), attackDamage(0), attackSuccess(false)
 {

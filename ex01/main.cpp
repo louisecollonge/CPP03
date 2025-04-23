@@ -1,9 +1,10 @@
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main()
 {
-	ClapTrap	A("Bimo");
-	ClapTrap	B("Cocotte");
+	ScavTrap	A("Bimo");
+	ScavTrap	B("Cocotte");
 
 	std::cout << std::endl;
 
@@ -27,6 +28,8 @@ int	main()
 	
 	B.beRepaired(1);
 
+	B.guardGate();
+
 	A.attack(B.getName());
 	if (A.getAttackSuccess())
 		B.takeDamage(A.getAttackDamage());
@@ -61,6 +64,8 @@ int	main()
 	if (B.getAttackSuccess())
 		A.takeDamage(B.getAttackDamage());
 	
+	A.guardGate();
+
 	std::cout << std::endl;
 
 	return 0;

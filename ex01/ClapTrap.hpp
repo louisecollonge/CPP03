@@ -6,6 +6,8 @@
 #define PINK	 	"\033[0;35m"
 #define DARK_GREEN	"\033[38;5;22m"
 #define LIGHT_GREEN	"\033[38;5;46m" 
+#define YELLOW		"\033[38;2;255;165;0m"
+#define BLUE_DARK	"\033[34m"
 #define BLUE		"\033[34m"
 #define BOLD 		"\033[1m"
 #define RESET		"\033[0m"
@@ -15,7 +17,7 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 
 		std::string		name;
 		unsigned int	hitPoints;
