@@ -37,13 +37,13 @@ ClapTrap::ClapTrap( const ClapTrap& other )
 			  << std::endl;
 }
 
-ClapTrap	 &ClapTrap::operator=( const ClapTrap& alternative )
+ClapTrap	 &ClapTrap::operator=( const ClapTrap& other )
 {
-	if (this != &alternative) {
-		this->name = alternative.name;
-		this->hitPoints = alternative.hitPoints;
-		this->energyPoints = alternative.energyPoints;
-		this->attackDamage = alternative.attackDamage;
+	if (this != &other) {
+		this->name = other.name;
+		this->hitPoints = other.hitPoints;
+		this->energyPoints = other.energyPoints;
+		this->attackDamage = other.attackDamage;
 	}
 	return (*this);
 }

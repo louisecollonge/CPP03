@@ -31,7 +31,7 @@ class ClapTrap
 		ClapTrap( const ClapTrap& other );
 		~ClapTrap();
 
-		ClapTrap		&operator=( const ClapTrap& alternative );
+		ClapTrap		&operator=( const ClapTrap& other );
 
 		std::string		getName() const;
 		unsigned int	getHitPoints() const;

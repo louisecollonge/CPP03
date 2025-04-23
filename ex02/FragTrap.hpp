@@ -11,17 +11,18 @@
 #define RESET		"\033[0m"
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 #include <iostream>
 #include <string>
 
-class ScavTrap : public ClapTrap
+class FragTrap : public ClapTrap
 {
 	public:
-		ScavTrap( const std::string& name );
-		ScavTrap( const ScavTrap& other );
-		~ScavTrap();
+		FragTrap( const std::string& name );
+		FragTrap( const FragTrap& other );
+		~FragTrap();
 
-		ScavTrap	&operator=( const ScavTrap& other );
+		FragTrap	&operator=( const FragTrap& other );
 
-		void		guardGate();
+		void		highFivesGuys( void );
 };
