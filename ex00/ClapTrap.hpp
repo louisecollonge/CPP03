@@ -1,0 +1,41 @@
+#pragma once
+
+#define ORANGE		"\033[38;5;214m"
+#define BOLD_RED 	"\033[1;31m"
+#define RED 		"\033[0;31m"
+#define PINK	 	"\033[0;35m"
+#define DARK_GREEN	"\033[38;5;22m"
+#define LIGHT_GREEN	"\033[38;5;46m" 
+#define RESET		"\033[0m"
+
+#include <iostream>
+#include <string>
+
+class ClapTrap
+{
+	private:
+
+		std::string		name;
+		unsigned int	hitPoints;
+		unsigned int	energyPoints;
+		unsigned int	attackDamage;
+		bool			attackSuccess;
+
+	public:
+
+		ClapTrap( std::string name );
+		ClapTrap( const ClapTrap& other );
+		~ClapTrap();
+
+		ClapTrap		&operator=( const ClapTrap& alternative );
+
+		std::string		getName() const;
+		unsigned int	getHitPoints() const;
+		unsigned int	getEnergyPoints() const;
+		unsigned int	getAttackDamage() const;
+		bool			getAttackSuccess() const;
+
+		void			attack( const std::string& target );
+		void			takeDamage( unsigned int amount );
+		void			beRepaired( unsigned int amount );
+};
