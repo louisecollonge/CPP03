@@ -29,4 +29,5 @@ class ScavTrap : virtual public ClapTrap // virtual to avoid double calling to C
 		ScavTrap	&operator=( const ScavTrap& other );
 
 		void		guardGate();
+		void		attack( const std::string& target );
 };

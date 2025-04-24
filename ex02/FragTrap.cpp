@@ -37,3 +37,29 @@ void	FragTrap::highFivesGuys( void )
 			  << "High five ! :)"
 			  << RESET << std::endl;
 }
+
+void	FragTrap::attack( const std::string& target )
+{
+	if (energyPoints < 1 || hitPoints < 1) {
+		attackSuccess = false;
+
+		std::cout << ORANGE << "FragTrap "
+				  << name
+				  << " cannot attack..."
+				  << RESET << std::endl;
+	} else {
+		energyPoints -= 1;
+		attackSuccess = true;
+
+		std::cout << PINK
+				  << "FragTrap "
+				  << name 
+				  << " attacks "
+				  << target
+				  << ", causing "
+				  << attackDamage
+				  << " points of damage!"
+				  << RESET
+				  << std::endl;
+	}
+}
