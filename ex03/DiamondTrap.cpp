@@ -38,10 +38,8 @@ DiamondTrap	&DiamondTrap::operator=( const DiamondTrap& other )
 {
 	if (this != &other)
 	{
-		ClapTrap::operator=(other);
-		FragTrap::operator=(other);
-		ScavTrap::operator=(other);
 		this->name = other.name;
+		ClapTrap::name = other.name + "_clap_name";
 		this->hitPoints = FragTrap::hitPoints;
 		this->energyPoints = ScavTrap::energyPoints;
 		this->attackDamage = FragTrap::attackDamage;

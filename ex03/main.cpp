@@ -4,6 +4,7 @@ int	main()
 {
 	DiamondTrap	A("Choubichomp");
 	A.whoAmI();
+	A.highFivesGuys();
 	std::cout << std::endl;
 
 	DiamondTrap	B("Bouzoum");
