@@ -20,7 +20,7 @@
 
 class ClapTrap
 {
-	protected:
+	protected: // is private but allows access to inheriting classes
 
 		std::string		name;
 		unsigned int	hitPoints;

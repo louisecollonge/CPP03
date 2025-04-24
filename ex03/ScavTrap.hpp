@@ -1,10 +1,8 @@
 #pragma once
 
 #include "ClapTrap.hpp"
-#include <iostream>
-#include <string>
 
-class ScavTrap : virtual public ClapTrap
+class ScavTrap : virtual public ClapTrap // virtual to avoid double calling to Clap through Frag & Scav
 {
 	public:
 		ScavTrap( const std::string& name );
