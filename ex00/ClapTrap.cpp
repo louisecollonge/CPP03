@@ -1,13 +1,15 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap( std::string name ) : hitPoints(10), energyPoints(10), attackDamage(0), attackSuccess(false)
+ClapTrap::ClapTrap( std::string name ) 
+	: hitPoints(10), 
+	  energyPoints(10), 
+	  attackDamage(0), 
+	  attackSuccess(false)
 {
 	this->name = name;
 
 	std::cout << DARK_GREEN
-			  << "ClapTrap "
-			  << name
-			  << " has been created."
+			  << "ClapTrap constructor called."
 			  << RESET
 			  << std::endl;
 }
@@ -15,9 +17,7 @@ ClapTrap::ClapTrap( std::string name ) : hitPoints(10), energyPoints(10), attack
 ClapTrap::~ClapTrap() 
 {
 	std::cout << DARK_GREEN
-			  << "ClapTrap "
-			  << name
-			  << " has been destroyed."
+			  << "ClapTrap destructor called."
 			  << RESET
 			  << std::endl;
 }
@@ -30,9 +30,7 @@ ClapTrap::ClapTrap( const ClapTrap& other )
 	  attackSuccess(false)
 {
 	std::cout << DARK_GREEN
-			  << "ClapTrap "
-			  << name
-			  << " has been created by copy."
+			  << "ClapTrap copy constructor called."
 			  << RESET
 			  << std::endl;
 }
